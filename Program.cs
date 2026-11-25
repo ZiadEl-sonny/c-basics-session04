@@ -21,13 +21,24 @@ namespace c_basics_session04
 
         //Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
         //"Clean Code".
-        static void PrintBookTitle(string title)
-        {
-            Console.WriteLine($"Book title: {title}");
-        }
+        //static void PrintBookTitle(string title)
+        //{
+        //    Console.WriteLine($"Book title: {title}");
+        //}
         #endregion
 
-            static void Main(string[] args)
+        #region funcOfQuestion5
+        //        Write a method AddBonusPages(int pages) that adds 50 to pages.Call it with a variable
+        //int pages = 400; and print pages afterward.What do you expect to see, and why?
+        static int AddBonusPages(int pages)
+        {
+           return pages += 50;
+        }
+
+
+        #endregion 
+
+        static void Main(string[] args)
         {
             #region question1
             //Create a one-dimensional array double[] prices with the values 25.5, 40.0, 33.75. Print
@@ -58,13 +69,27 @@ namespace c_basics_session04
             #region question4
             //Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
             //"Clean Code".
-            PrintBookTitle("Clean Code");
-            
+            //PrintBookTitle("Clean Code");
 
 
 
 
 
+
+            #endregion
+
+            #region question5
+            //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+            //int pages = 400; and print pages afterward. What do you expect to see, and why?
+
+            int pages = 400;
+            Console.WriteLine($" Pages:{AddBonusPages(pages)}");
+            Console.WriteLine("----------------Afterward---------------");
+            Console.WriteLine($" Pages: {pages}");
+
+
+            // Expected function=> Pages:450 , variable Pages => 400
+            // because the variable passed by "Value Type"
             #endregion
 
 
