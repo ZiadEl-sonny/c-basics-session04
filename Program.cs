@@ -30,13 +30,30 @@ namespace c_basics_session04
         #region funcOfQuestion5
         //        Write a method AddBonusPages(int pages) that adds 50 to pages.Call it with a variable
         //int pages = 400; and print pages afterward.What do you expect to see, and why?
-        static int AddBonusPages(int pages)
+        //static int AddBonusPages(int pages)
+        //{
+        //   return pages += 50;
+        //}
+
+
+        #endregion
+
+        #region funcOfQuestion6
+        //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
+        //            with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
+        //see, and why?
+        static double ApplyDiscount(double[] prices)
         {
-           return pages += 50;
+            for (int i = 0; i < prices.Length; i++)
+            {
+                prices[i] -= 5;
+            }
+            return prices[0];
         }
 
 
-        #endregion 
+
+        #endregion
 
         static void Main(string[] args)
         {
@@ -82,14 +99,34 @@ namespace c_basics_session04
             //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
             //int pages = 400; and print pages afterward. What do you expect to see, and why?
 
-            int pages = 400;
-            Console.WriteLine($" Pages:{AddBonusPages(pages)}");
-            Console.WriteLine("----------------Afterward---------------");
-            Console.WriteLine($" Pages: {pages}");
+            //int pages = 400;
+            //Console.WriteLine($" Pages:{AddBonusPages(pages)}");
+            //Console.WriteLine("----------------Afterward---------------");
+            //Console.WriteLine($" Pages: {pages}");
 
 
             // Expected function=> Pages:450 , variable Pages => 400
-            // because the variable passed by "Value Type"
+            // because the variable passed by "Value Type" that does not change the original value.
+            #endregion
+
+            #region question6
+
+            //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
+            //            with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
+            //see, and why?
+
+            double[] prices = { 25.5, 40.0 };
+          Console.WriteLine( ApplyDiscount(prices));
+          Console.WriteLine("-------afterward-------");
+            Console.WriteLine(prices[0]);
+
+            //20.5 & 20.5
+            //because the array passed by "Reference Type" that changes the original value.
+
+
+
+
+
             #endregion
 
 
