@@ -9,6 +9,12 @@ namespace c_basics_session04
 {
     internal class Program
     {
+
+
+        static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the Library!");
+        }
         static void Main(string[] args)
         {
             #region question1
@@ -24,9 +30,26 @@ namespace c_basics_session04
             //shelf 1 has 1, 4 copies.Print the number of copies on shelf 1, slot 0
 
 
-            int[,] shelfCopies = { { 3, 5 }, { 1, 4 } };
-            Console.WriteLine($"the number of copies on shelf 1, slot 0:  {shelfCopies[1,0]}");
+            //int[,] shelfCopies = { { 3, 5 }, { 1, 4 } };
+            //Console.WriteLine($"the number of copies on shelf 1, slot 0:  {shelfCopies[1,0]}");
             #endregion
+
+            #region question3
+            //Write a method called PrintWelcomeMessage that takes no parameters and prints
+            //"Welcome to the Library!".Call it from Main
+            PrintWelcomeMessage();
+
+
+
+            #endregion
+
+
+
+
+
+
+
+
 
         }
     }
