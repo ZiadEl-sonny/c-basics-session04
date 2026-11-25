@@ -55,14 +55,30 @@ namespace c_basics_session04
 
         #endregion
 
-        #region funcOfQuestion
+        #region funcOfQuestion7
         //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
         // Call it and print pages afterward.How is the result different from question 5?
 
-        static int AddBonusPages (ref int pages)
+        //static int AddBonusPages (ref int pages)
+        //{
+        //    return pages += 50;
+        //}
+
+
+        #endregion
+
+        #region funcOfQuestion8
+        /*Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+        new array { 10.0, 12.5, 15.0 }. Call it with your prices array and print prices.Length
+         afterward*/
+
+        public static double[] ReplaceArray(ref double[] prices)
         {
-            return pages += 50;
+            prices = new double[] { 10.0, 12.5, 15.0 };
+            return prices;
+
         }
+
 
 
         #endregion
@@ -145,13 +161,25 @@ namespace c_basics_session04
             //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
             //Call it and print pages afterward. How is the result different from question 5 ?
 
-            int pages = 400;
-            Console.WriteLine($" Pages:{AddBonusPages(ref pages)}");
-            Console.WriteLine("----------------Afterward---------------");
-            Console.WriteLine($" Pages: {pages}");
+            //int pages = 400;
+            //Console.WriteLine($" Pages:{AddBonusPages(ref pages)}");
+            //Console.WriteLine("----------------Afterward---------------");
+            //Console.WriteLine($" Pages: {pages}");
 
             //Pages:450,afterward,Pages:450
             //because the array passed by "value Type as a reference" that changes the original value.
+
+            #endregion
+
+            #region question8
+            /*Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+            new array { 10.0, 12.5, 15.0 }. Call it with your prices array and print prices.Length
+             afterward*/
+
+            double[] pricesArray = { 25.5, 40.0,11.2,18 };
+            pricesArray = ReplaceArray(ref pricesArray);
+            Console.WriteLine(pricesArray.Length);
+
 
             #endregion
 
