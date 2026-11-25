@@ -10,12 +10,24 @@ namespace c_basics_session04
     internal class Program
     {
 
+        #region funcOfQuestion3
+        //static void PrintWelcomeMessage()
+        //{
+        //    Console.WriteLine("Welcome to the Library!");
+        //}
+        #endregion
 
-        static void PrintWelcomeMessage()
+        #region funcOfQuestion4
+
+        //Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
+        //"Clean Code".
+        static void PrintBookTitle(string title)
         {
-            Console.WriteLine("Welcome to the Library!");
+            Console.WriteLine($"Book title: {title}");
         }
-        static void Main(string[] args)
+        #endregion
+
+            static void Main(string[] args)
         {
             #region question1
             //Create a one-dimensional array double[] prices with the values 25.5, 40.0, 33.75. Print
@@ -37,7 +49,19 @@ namespace c_basics_session04
             #region question3
             //Write a method called PrintWelcomeMessage that takes no parameters and prints
             //"Welcome to the Library!".Call it from Main
-            PrintWelcomeMessage();
+            //PrintWelcomeMessage();
+
+
+
+            #endregion
+
+            #region question4
+            //Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
+            //"Clean Code".
+            PrintBookTitle("Clean Code");
+            
+
+
 
 
 
