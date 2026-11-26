@@ -103,13 +103,27 @@ namespace c_basics_session04
         //    }
         //     return false;
         //}
-        static void PrintBookInfo(string title, int pages = 300)
+        //static void PrintBookInfo(string title, int pages = 300)
+        //{
+        //    Console.WriteLine($"the Title is:{title}");
+        //    Console.WriteLine($"the Pages is:{pages}");
+        //}
+
+
+        #endregion
+
+        #region funcOfQuestion11
+        //        Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
+        //Call it with three book titles.
+
+
+        static void PrintAllTitles(params string[] titles)
         {
-            Console.WriteLine($"the Title is:{title}");
-            Console.WriteLine($"the Pages is:{pages}");
+            foreach (string title in titles)
+            {
+                Console.WriteLine(title);
+            }
         }
-
-
         #endregion
 
         static void Main(string[] args)
@@ -236,7 +250,20 @@ namespace c_basics_session04
             #region question10
             //            Using the PrintBookInfo method from the question above, call it by naming the
             //parameters, passing pages before title.
-            PrintBookInfo(pages : 450, title : "Clean Code");
+            //PrintBookInfo(pages : 450, title : "Clean Code");
+
+
+            #endregion
+
+            #region question11
+            //            Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
+            //Call it with three book titles.
+
+            string bookTitle01 = "Clean Code";
+            string bookTitle02 = "Fundamentals of programming";
+            string bookTitle03 = "Data Structure";
+
+            PrintAllTitles(bookTitle01,bookTitle02,bookTitle03);
 
 
             #endregion
