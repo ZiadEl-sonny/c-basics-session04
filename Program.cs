@@ -72,14 +72,43 @@ namespace c_basics_session04
         new array { 10.0, 12.5, 15.0 }. Call it with your prices array and print prices.Length
          afterward*/
 
-        public static double[] ReplaceArray(ref double[] prices)
+        //public static double[] ReplaceArray(ref double[] prices)
+        //{
+        //    prices = new double[] { 10.0, 12.5, 15.0 };
+        //    return prices;
+
+        //}
+
+
+
+        #endregion
+
+        #region funcOfQuestion9
+        /*Write a method bool TryGetPrice(string title, out double price) that returns true and sets
+        price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0. Call it
+        2
+        and print the price if found
+        Write a method PrintBookInfo(string title, int pages = 300) where pages is optional. Call
+        it once with only a title, and once passing both a title and pages.*/
+
+        static bool TryGetPrice(string title, out double price)
         {
-            prices = new double[] { 10.0, 12.5, 15.0 };
-            return prices;
-
+            price = 0;
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                Console.WriteLine($"Price: {price}");
+                
+                return true;
+            }
+             return false;
         }
-
-
+        static void PrintBookInfo (string title , int pages=300)
+        {
+            Console.WriteLine($"the Title is:{title}");
+            Console.WriteLine($"the Pages is:{pages}");
+        }
+        
 
         #endregion
 
@@ -176,14 +205,33 @@ namespace c_basics_session04
             new array { 10.0, 12.5, 15.0 }. Call it with your prices array and print prices.Length
              afterward*/
 
-            double[] pricesArray = { 25.5, 40.0,11.2,18 };
-            pricesArray = ReplaceArray(ref pricesArray);
-            Console.WriteLine(pricesArray.Length);
+            //double[] pricesArray = { 25.5, 40.0,11.2,18 };
+            //pricesArray = ReplaceArray(ref pricesArray);
+            //Console.WriteLine(pricesArray.Length);
 
 
             #endregion
 
+            #region question9
+            /*Write a method bool TryGetPrice(string title, out double price) that returns true and sets
+            price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0. Call it
+            2
+            and print the price if found
+            Write a method PrintBookInfo(string title, int pages = 300) where pages is optional. Call
+            it once with only a title, and once passing both a title and pages.*/
 
+            string title = "Clean Code";
+            double price = 25;
+
+
+             TryGetPrice(title,out price);
+            Console.WriteLine("---------passing 1 value-----------");
+            PrintBookInfo(title);
+            Console.WriteLine("----------passing 2 values----------");
+            PrintBookInfo (title,450);
+
+
+            #endregion
 
 
 
