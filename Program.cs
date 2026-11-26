@@ -91,24 +91,24 @@ namespace c_basics_session04
         Write a method PrintBookInfo(string title, int pages = 300) where pages is optional. Call
         it once with only a title, and once passing both a title and pages.*/
 
-        static bool TryGetPrice(string title, out double price)
-        {
-            price = 0;
-            if (title == "Clean Code")
-            {
-                price = 25.5;
-                Console.WriteLine($"Price: {price}");
-                
-                return true;
-            }
-             return false;
-        }
-        static void PrintBookInfo (string title , int pages=300)
+        //static bool TryGetPrice(string title, out double price)
+        //{
+        //    price = 0;
+        //    if (title == "Clean Code")
+        //    {
+        //        price = 25.5;
+        //        Console.WriteLine($"Price: {price}");
+
+        //        return true;
+        //    }
+        //     return false;
+        //}
+        static void PrintBookInfo(string title, int pages = 300)
         {
             Console.WriteLine($"the Title is:{title}");
             Console.WriteLine($"the Pages is:{pages}");
         }
-        
+
 
         #endregion
 
@@ -220,19 +220,26 @@ namespace c_basics_session04
             Write a method PrintBookInfo(string title, int pages = 300) where pages is optional. Call
             it once with only a title, and once passing both a title and pages.*/
 
-            string title = "Clean Code";
-            double price = 25;
+            //string title = "Clean Code";
+            //double price = 25;
 
 
-             TryGetPrice(title,out price);
-            Console.WriteLine("---------passing 1 value-----------");
-            PrintBookInfo(title);
-            Console.WriteLine("----------passing 2 values----------");
-            PrintBookInfo (title,450);
+            // TryGetPrice(title,out price);
+            //Console.WriteLine("---------passing 1 value-----------");
+            //PrintBookInfo(title);
+            //Console.WriteLine("----------passing 2 values----------");
+            //PrintBookInfo (title,450);
 
 
             #endregion
 
+            #region question10
+            //            Using the PrintBookInfo method from the question above, call it by naming the
+            //parameters, passing pages before title.
+            PrintBookInfo(pages : 450, title : "Clean Code");
+
+
+            #endregion
 
 
 
