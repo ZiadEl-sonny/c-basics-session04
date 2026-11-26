@@ -117,13 +117,13 @@ namespace c_basics_session04
         //Call it with three book titles.
 
 
-        static void PrintAllTitles(params string[] titles)
-        {
-            foreach (string title in titles)
-            {
-                Console.WriteLine(title);
-            }
-        }
+        //static void PrintAllTitles(params string[] titles)
+        //{
+        //    foreach (string title in titles)
+        //    {
+        //        Console.WriteLine(title);
+        //    }
+        //}
         #endregion
 
         static void Main(string[] args)
@@ -259,11 +259,11 @@ namespace c_basics_session04
             //            Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
             //Call it with three book titles.
 
-            string bookTitle01 = "Clean Code";
-            string bookTitle02 = "Fundamentals of programming";
-            string bookTitle03 = "Data Structure";
+            //string bookTitle01 = "Clean Code";
+            //string bookTitle02 = "Fundamentals of programming";
+            //string bookTitle03 = "Data Structure";
 
-            PrintAllTitles(bookTitle01,bookTitle02,bookTitle03);
+            //PrintAllTitles(bookTitle01,bookTitle02,bookTitle03);
 
 
             #endregion
